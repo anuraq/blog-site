@@ -1,8 +1,28 @@
+{% load static %}
 <html>
 <head>
-  <title>INDEX.HTML</title>
+  <title>home - blog</title>
+  <link rel="stylesheet" href="{% static "style.css" %}">
+  <link rel="stylesheet" href="{% static "bootstrap.css" %}">
 </head>
 <body>
-<div style="width: content-fit; margin: 0 auto;"> Hello from Html</div>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+  </nav>
+  <div class="container justify-content-center">
+    <div class="card bg-light" style="margin-top: 5vh">
+      <div class="card-body">
+        <h5 class="card-title">Blog 1</h5>
+        <h6 class="card-subtitle mb-2 text-muted">name 1</h6>
+        <img src="{% static "blogpic.jpg" %}" class="img-fluid rounded align-middle" alt="Responsive image" style="display: block; width: 90%; margin: 0 auto;">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="nav-bar"> Hello from Html</div> -->
+  <script src="{% static "jquery-3.5.1.min.js" %}"></script>
+  <script src="{% static "bootstarp.bundle.js" %}"></script>
 </body>
 </html>
