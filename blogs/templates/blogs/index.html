@@ -2,25 +2,19 @@
 {% load static %}
 
 {% block content %}
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark" style="background-color: #034DA2;">
     <a class="navbar-brand" href="#">Navbar</a>
   </nav>
   <div class="container justify-content-center" style="margin-top: 3vh">
+    {% for blog in object_list %}
     <div class="card bg-light" style="margin-bottom: 2vh">
       <div class="card-body">
-        <h5 class="card-title">Blog 1</h5>
-        <h6 class="card-subtitle mb-2 text-muted">name 1</h6>
+        <h5 class="card-title">{{blog.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{blog.author}}</h6>
         <img src="{% static "blogpic.jpg" %}" class="rounded float-right" alt="Responsive image" style="max-width: 20%;">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">{{blog.text_area}}</p>
       </div>
     </div>
-    <div class="card bg-light" style="margin-bottom: 2vh">
-      <div class="card-body">
-        <h5 class="card-title">Blog 1</h5>
-        <h6 class="card-subtitle mb-2 text-muted">name 1</h6>
-        <img src="{% static "blogpic.jpg" %}" class="rounded float-right" alt="Responsive image" style="max-width: 20%;">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 {% endblock content %}
