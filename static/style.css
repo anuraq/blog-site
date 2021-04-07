@@ -7,3 +7,17 @@ body{
   background-color: black;
   color: white;
 }
+.navbar-brand {
+  color: white !important;
+}
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* a:hover
+{
+     color: #00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+} */

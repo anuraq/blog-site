@@ -8,3 +8,11 @@ def index(request):
         'object_list': queryset
     }
     return render(request, 'blogs/index.html', context)
+
+def blog(request, blog_id):
+    blog = Blog.objects.filter(id=blog_id)[0]
+    context = {
+        'blog_id': blog_id,
+        'blog': blog
+    }
+    return render(request, 'blogs/blog.html', context)
