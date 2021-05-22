@@ -6,15 +6,22 @@
     <a class="p-2 navbar-brand" href="#">Navbar</a>
   </nav>
   <div class="container-xl justify-content-center mt-4">
+    <div class="container text-center mb-4">
+      <div class="bg-primary" style="height: 150px; width: 150px; margin: 0 auto; opacity: 0.4;"></div>
+      <div class="fs-1 fw-bold">Kumar Anurag</div>
+      <div class="fs-5">This is me. My name is anurag, the pupose of this blog space to exist is to exist and sometime may be someting might be added.</div>
+    </div>
     {% for blog in object_list %}
     <a href="/b/{{ blog.id }}">
       <div class="card bg-light" style="margin-bottom: 2vh">
         <div class="card-body">
-          <div class="float-end">{{ blog.yearpublished }}</div>
-          <h5 class="card-title fs-3">{{blog.title}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted fs-5">{{blog.author}}</h6>
-          <img src="{% static "blogpic.jpg" %}" class="rounded float-end" alt="Responsive image" style="max-width: 20%;">
-          <p class="card-text">{{blog.text_area|slice:":30"}}...</p>
+          <img src="{% static "blogpic.jpg" %}" class="rounded float-start me-3" alt="Responsive image" style="max-width: 20%;">
+          <div class="container-xl">
+            <div class="float-end">{{ blog.yearpublished }}</div>
+            <h5 class="card-title fs-3">{{blog.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted fs-5">{{blog.author}}</h6>
+            <p class="card-text">{{blog.text_area|slice:":40"}}...</p>
+          </div>
         </div>
       </div>
     <a>
